@@ -1,9 +1,7 @@
-endpoint :
-GET	("/todos")
-GET	("/todos/:id")
-POST	("/create-todos")
-PUT	("/update-todos/:id")
-DELETE	("/delete-todos/:id")
+access swagger :
+cmd -> swag init
+http://localhost:8080/swagger/index.html/
+
 
 - get id by paramter
 - post request with JSON no Form
