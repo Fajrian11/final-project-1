@@ -1,10 +1,11 @@
 access swagger :
 cmd -> swag init
-http://localhost:8080/swagger/index.html/
+cmd -> go run main.go
+http://localhost:8080/swagger/index.html
 
 
 - get id by paramter
-- post request with JSON no Form
+- post request with JSON, no Form
 {
 	"name":"Udin",
 	"tanggal":"22 Oktober 2022",

@@ -13,7 +13,7 @@ import (
 )
 
 var todos = map[int]*models.Todos{}
-var seq = 1
+var id = 1
 
 // @BasePath /api/v1
 
@@ -32,7 +32,7 @@ var seq = 1
 // @Router /list-todos/create-todos [post]
 func createTodos(c *gin.Context) {
 	t := &models.Todos{
-		ID: seq,
+		ID: id,
 	}
 
 	var result gin.H
@@ -48,7 +48,7 @@ func createTodos(c *gin.Context) {
 		}
 	}
 	todos[t.ID] = t
-	seq++
+	id++
 
 	c.JSON(http.StatusCreated, result)
 }
