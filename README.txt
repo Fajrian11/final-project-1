@@ -1,11 +1,16 @@
 access swagger :
 cmd -> swag init
 cmd -> go run main.go
+localfile : 
 http://localhost:8080/swagger/index.html
+
+hostname Hosting :
+https://final-project-1-group-5.herokuapp.com/swagger/index.html
 
 
 - get id by paramter
 - post request with JSON, no Form
+
 {
 	"name":"Udin",
 	"tanggal":"22 Oktober 2022",
