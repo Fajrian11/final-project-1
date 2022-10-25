@@ -2,7 +2,9 @@ package main
 
 import (
 	"final_project_1/models"
+	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	docs "final_project_1/docs"
@@ -167,5 +169,17 @@ func main() {
 	}
 
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
-	r.Run(":8080")
+
+	port := os.Getenv("SERVICE_PORT")
+	if port == "" {
+		port = "9000" // Default port if not specified
+	}
+	err := r.Run(":" + port)
+	if err != nil {
+		log.Println("[ERROR GRACEFUL]", err)
+		os.Exit(1)
+	}
+
+	os.Exit(0)
+
 }
