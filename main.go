@@ -174,7 +174,7 @@ func main() {
 	if port == "" {
 		port = "9000" // Default port if not specified
 	}
-	err := r.Run(":" + port)
+	err := r.Run()
 	if err != nil {
 		log.Println("[ERROR GRACEFUL]", err)
 		os.Exit(1)
