@@ -1,7 +1,7 @@
 access swagger :
 cmd -> swag init
 cmd -> go run main.go
-localfile : 
+localfiles : 
 http://localhost:8080/swagger/index.html
 
 hostname Hosting :
